@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.MainActivity">
+
+    <EditText
+        android:id="@+id/Ntitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/NTexto"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="13dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@+id/exluir"
+        app:layout_constraintEnd_toStartOf="@+id/exluir"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ListView
+        android:id="@+id/listV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAlterar" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="cadastrar"
+        android:text="Cadastrar"
+        app:layout_constraintBottom_toTopOf="@+id/buttonLimpar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Ntitulo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/exluir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="excluir"
+        android:text="Excluir"
+        app:iconTint="#E40000"
+        app:layout_constraintEnd_toStartOf="@+id/btnAlterar"
+        app:layout_constraintStart_toEndOf="@+id/NTexto"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLimpar" />
+
+    <Button
+        android:id="@+id/buttonLimpar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="4dp"
+        android:onClick="limpar"
+        android:text="Desselecionar"
+        app:layout_constraintBottom_toTopOf="@+id/btnAlterar"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnAlterar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="98dp"
+        android:onClick="alterar"
+        android:text="Alterar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/exluir"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
